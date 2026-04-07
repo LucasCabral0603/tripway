@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contato - TripWay</title>
+    <title>Contato e Reserva - TripWay</title>
 </head>
 <body>
     <header>
@@ -43,9 +43,47 @@
                 <input type="tel" id="telefone" name="telefone">
                 <br><br>
 
+                <label for="destino">Destino de Interesse:</label>
+                <select id="destino" name="destino" required>
+                    <option value="">Selecione um destino</option>
+                    <option value="praia">Praia do Rosa - SC</option>
+                    <option value="montanha">Serra da Mantiqueira - MG</option>
+                    <option value="cidade">São Paulo - SP</option>
+                    <option value="outros">Outros destinos</option>
+                </select>
+                <br><br>
+
+                <label for="data">Data da Viagem:</label>
+                <input type="date" id="data" name="data" required>
+                <br><br>
+
+                <label for="pessoas">Quantidade de Pessoas:</label>
+                <input type="number" id="pessoas" name="pessoas" min="1" max="50" required>
+                <br><br>
+
+                <label for="mensagem">Mensagem / Observações:</label>
+                <br>
+                <textarea id="mensagem" name="mensagem" rows="5" cols="50" placeholder="Conte-nos mais sobre sua viagem dos sonhos..."></textarea>
+                <br><br>
+
+                <button type="submit">Enviar Solicitação</button>
+                <button type="reset">Limpar Formulário</button>
             </form>
+        </section>
+
+        <section>
+            <h3>Outras Formas de Contato</h3>
+            <p><strong>Telefone:</strong> (11) 1234-5678</p>
+            <p><strong>WhatsApp:</strong> (11) 98765-4321</p>
+            <p><strong>E-mail:</strong> contato@tripway.com</p>
+            <p><strong>Endereço:</strong> Av. Paulista, 1000 - São Paulo, SP</p>
+            <p><strong>Horário de Atendimento:</strong> Segunda a Sexta, 9h às 18h</p>
         </section>
     </main>
 
+    <footer>
+        <p>&copy; 2024 TripWay - Todos os direitos reservados</p>
+        <p>Contato: contato@tripway.com | Tel: (11) 1234-5678</p>
+    </footer>
 </body>
 </html>
