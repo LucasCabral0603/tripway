@@ -1,15 +1,9 @@
-/* ===========================
-   RESET BÁSICO
-   =========================== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* ===========================
-   VARIÁVEIS CSS
-   =========================== */
 :root {
   --cor-primaria: #0a3d62;
   --cor-secundaria: #1e6fa5;
@@ -29,9 +23,7 @@
   --max-largura: 1200px;
 }
 
-/* ===========================
-   BODY
-   =========================== */
+
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: var(--cor-fundo);
@@ -46,9 +38,6 @@ img {
   display: block;
 }
 
-/* ===========================
-   HEADER
-   =========================== */
 header {
   background: linear-gradient(135deg, var(--cor-fundo-escuro) 0%, var(--cor-primaria) 100%);
   padding: 0 2rem;
@@ -79,9 +68,6 @@ header {
   color: var(--cor-acento);
 }
 
-/* ===========================
-   NAVEGAÇÃO
-   =========================== */
 nav ul {
   list-style: none;
   display: flex;
@@ -104,9 +90,6 @@ nav ul li a:hover {
   border-bottom: 2px solid var(--cor-acento);
 }
 
-/* ===========================
-   HERO / BANNER
-   =========================== */
 .hero {
   position: relative;
   width: 100%;
@@ -158,9 +141,6 @@ nav ul li a:hover {
   opacity: 0.92;
 }
 
-/* ===========================
-   BOTÕES
-   =========================== */
 .btn {
   display: inline-block;
   padding: 0.85rem 2rem;
@@ -196,9 +176,6 @@ nav ul li a:hover {
   transform: translateY(-2px);
 }
 
-/* ===========================
-   SEÇÕES GERAIS
-   =========================== */
 section {
   padding: 5rem 2rem;
 }
@@ -226,9 +203,6 @@ section {
   margin: 0 auto;
 }
 
-/* ===========================
-   SEÇÃO SOBRE
-   =========================== */
 #sobre {
   background-color: var(--cor-branco);
 }
@@ -270,9 +244,6 @@ section {
   flex: 1;
 }
 
-/* ===========================
-   CARDS (compartilhado com destinos e pacotes)
-   =========================== */
 .cards-container {
   display: flex;
   flex-wrap: wrap;
@@ -320,9 +291,6 @@ section {
   margin-bottom: 1rem;
 }
 
-/* ===========================
-   FORMULÁRIO (página contato)
-   =========================== */
 .form-container {
   max-width: 700px;
   margin: 0 auto;
@@ -381,9 +349,6 @@ section {
   flex: 1;
 }
 
-/* ===========================
-   FOOTER
-   =========================== */
 footer {
   background: var(--cor-fundo-escuro);
   color: var(--cor-branco);
@@ -402,9 +367,6 @@ footer a:hover {
   text-decoration: underline;
 }
 
-/* ===========================
-   LINKS
-   =========================== */
 a {
   color: var(--cor-secundaria);
   transition: var(--transicao);
@@ -414,11 +376,6 @@ a:hover {
   color: var(--cor-primaria);
 }
 
-/* ===========================
-   RESPONSIVIDADE
-   =========================== */
-
-/* Tablet */
 @media (max-width: 900px) {
   .sobre-grid {
     flex-direction: column;
@@ -443,7 +400,6 @@ a:hover {
   }
 }
 
-/* Celular */
 @media (max-width: 768px) {
   nav ul {
     flex-direction: column;
@@ -502,9 +458,6 @@ a:hover {
   }
 }
 
-/* ===========================
-   BANNER INTERNO DAS PÁGINAS
-   =========================== */
 .pagina-banner {
   background: linear-gradient(135deg, var(--cor-fundo-escuro) 0%, var(--cor-primaria) 100%);
   color: var(--cor-branco);
@@ -523,9 +476,6 @@ a:hover {
   opacity: 0.85;
 }
 
-/* ===========================
-   TAG DOS CARDS
-   =========================== */
 .card-tag {
   display: inline-block;
   background-color: var(--cor-acento);
@@ -539,9 +489,6 @@ a:hover {
   letter-spacing: 0.5px;
 }
 
-/* ===========================
-   LISTA DE INFOS DO CARD (pacotes)
-   =========================== */
 .card-info {
   list-style: none;
   margin-bottom: 1rem;
