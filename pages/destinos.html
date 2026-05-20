@@ -1,70 +1,83 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-    <meta charset="UTF-8">
-    <title>Destinos | TripWay</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Destinos | TripWay</title>
+  <link rel="stylesheet" href="../css/style.css">
 </head>
+<body>
 
-<body style="font-family: Arial">
-
-    <header>
-    
-        <h1>TripWay</h1>
-    </header>
-
-
-    <nav>
+  <!-- HEADER -->
+  <header>
+    <div class="header-inner">
+      <a href="../index.html" class="logo">Trip<span>Way</span></a>
+      <nav>
         <ul>
-            <li><a href="../index.html">Home</a></li>
-
-            <li><a href="destinos.html">Destinos</a></li>
-
-            <li><a href="pacotes.html">Pacotes</a></li>
-
-            <li><a href="contato.html">Contato</a></li>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="destinos.html">Destinos</a></li>
+          <li><a href="pacotes.html">Pacotes</a></li>
+          <li><a href="contato.html">Contato</a></li>
         </ul>
-    </nav>
+      </nav>
+    </div>
+  </header>
 
-    <main>
+  <main>
 
+    <!-- BANNER DA PÁGINA -->
+    <section class="pagina-banner">
+      <div class="container">
+        <h1>Nossos Destinos</h1>
+        <p>Confira alguns dos melhores lugares para viajar com a TripWay.</p>
+      </div>
+    </section>
 
-        <h1>Destinos TripWay</h1>
+    <!-- CARDS DE DESTINOS -->
+    <section id="destinos-lista">
+      <div class="container">
+        <div class="cards-container">
 
-        <section>
-            <h2>Nossos Destinos</h2>
-            <p>Confira alguns dos melhores lugares para viajar com a TripWay.</p>
-        </section>
+          <div class="card">
+            <img src="https://static.wixstatic.com/media/bfb138_67949d07ea9349e2979c6f5b1196bfac~mv2.jpg/v1/fill/w_568,h_378,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/bfb138_67949d07ea9349e2979c6f5b1196bfac~mv2.jpg" alt="Praia do Rosa, Santa Catarina">
+            <div class="card-body">
+              <span class="card-tag">Praia</span>
+              <h3>Praia do Rosa — SC</h3>
+              <p>Um destino perfeito para quem busca tranquilidade, com mar azul e natureza incrível.</p>
+              <a href="pacotes.html" class="btn btn-primario">Ver Pacotes</a>
+            </div>
+          </div>
 
-        <section>
-            <h3>Praia do Rosa - SC</h3>
-            <img src="../images/praia.jpg" alt="Praia do Rosa" width="300">
-            <p><strong>Descrição:</strong> Um destino perfeito para quem busca tranquilidade, com mar azul e natureza incrível.</p>
-            <p><strong>Tipo:</strong> Praia</p>
-        </section>
+          <div class="card">
+            <img src="https://vistadamantiqueira.com.br/wp-content/uploads/2023/08/vista-da-mantiqueira-condominio-rural-goncalves-mg-serra-da-mantiqueira-terrenos-lotes-_0015_Alta-Resolucao232.jpg" alt="Serra da Mantiqueira, Minas Gerais">
+            <div class="card-body">
+              <span class="card-tag">Montanha</span>
+              <h3>Serra da Mantiqueira — MG</h3>
+              <p>Perfeito para quem gosta de natureza, trilhas e clima de montanha.</p>
+              <a href="pacotes.html" class="btn btn-primario">Ver Pacotes</a>
+            </div>
+          </div>
 
-        <section>
+          <div class="card">
+            <img src="https://www.melhoresdestinos.com.br/wp-content/uploads/2019/02/passagens-aereas-paris-capa2019-02.jpg" alt="Torre Eiffel em Paris, França">
+            <div class="card-body">
+              <span class="card-tag">Internacional</span>
+              <h3>Paris — França</h3>
+              <p>Um dos destinos mais famosos do mundo, conhecida por sua cultura, gastronomia e a Torre Eiffel.</p>
+              <a href="pacotes.html" class="btn btn-primario">Ver Pacotes</a>
+            </div>
+          </div>
 
-            <h3>Serra da Mantiqueira - MG</h3>
-            <img src="../images/montanha.jpg" alt="Serra da Mantiqueira" width="300">
-            <p><strong>Descrição:</strong> Perfeito para quem gosta de natureza, trilhas e clima de montanha.</p>
-            <p><strong>Tipo:</strong> Montanha</p>
-        </section>
+        </div>
+      </div>
+    </section>
 
-        <section>
+  </main>
 
-            <h3>Paris - França</h3>
-            <img src="../images/paris.jpg" alt="Torre Eiffel em Paris" width="300">
-            <p><strong>Descrição:</strong> Paris é um dos destinos mais famosos do mundo, conhecida por sua cultura, gastronomia e pontos turísticos como a Torre Eiffel.</p>
-            <p><strong>Tipo:</strong> Internacional</p>
-
-        </section>
-
-    </main>
-
-    <footer>
-        <p>&copy; 2026 TripWay</p>
-    </footer>
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2026 TripWay — Todos os direitos reservados</p>
+  </footer>
 
 </body>
 </html>
