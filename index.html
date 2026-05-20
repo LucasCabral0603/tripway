@@ -1,48 +1,121 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TripWay</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TripWay — Guia de Viagens</title>
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
 
-    <header>
-        <nav>
-            <a class="logo" href="index.html">TripWay</a>
-            <ul>
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="pages/destinos.html">Destinos</a></li>
-                <li><a href="pages/pacotes.html">Pacotes</a></li>
-                <li><a href="pages/contato.html">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
+  <!-- HEADER -->
+  <header>
+    <div class="header-inner">
+      <a href="index.html" class="logo">Trip<span>Way</span></a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="pages/destinos.html">Destinos</a></li>
+          <li><a href="pages/pacotes.html">Pacotes</a></li>
+          <li><a href="pages/contato.html">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    <main>
+  <main>
 
-        <section class="caixa-principal">
-            <div class="caixa-texto">
-                <h1>Bem-vindo à <span>TripWay</span></h1>
-                <p>Conheça destinos incríveis pelo mundo em nossos conteúdos exclusivos!</p>
-                <a href="pages/destinos.html" class="botao">Conhecer Destinos</a>
+    <!-- HERO / BANNER -->
+    <section class="hero">
+      <img
+        src="https://images.pexels.com/photos/30615703/pexels-photo-30615703.jpeg"
+        alt="Vista aérea de Paris com a Torre Eiffel ao fundo"
+      >
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h2>Bem-vindo à TripWay</h2>
+        <p>Conheça destinos incríveis pelo mundo com experiências exclusivas e roteiros personalizados para você.</p>
+        <a href="pages/destinos.html" class="btn btn-primario">Explorar Destinos</a>
+      </div>
+    </section>
+
+    <!-- SOBRE -->
+    <section id="sobre">
+      <div class="sobre-grid">
+        <div class="sobre-img">
+          <img
+            src="https://images.pexels.com/photos/1371360/pexels-photo-1371360.jpeg"
+            alt="Viajantes explorando um destino turístico"
+          >
+        </div>
+        <div class="sobre-texto">
+          <h2>Sobre a TripWay</h2>
+          <p>
+            Somos uma agência de viagens apaixonada por conectar pessoas a novas culturas, paisagens e experiências únicas ao redor do mundo.
+          </p>
+          <p>
+            Oferecemos pacotes personalizados, roteiros exclusivos e suporte completo para que sua viagem seja inesquecível — do planejamento à volta para casa.
+          </p>
+          <a href="pages/pacotes.html" class="btn btn-primario">Ver Pacotes</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- DESTINOS EM DESTAQUE -->
+    <section id="destinos">
+      <div class="container">
+        <div class="titulo-secao">
+          <h2>Destinos em Destaque</h2>
+          <p>Escolha o seu próximo destino entre as nossas opções mais populares</p>
+        </div>
+        <div class="cards-container">
+
+          <div class="card">
+            <img
+              src="https://images.pexels.com/photos/338515/pexels-photo-338515.jpeg"
+              alt="Praia paradisíaca com águas cristalinas"
+            >
+            <div class="card-body">
+              <h3>Maldivas</h3>
+              <p>Relaxe em bangalôs sobre o mar e desfrute de praias paradisíacas com águas cristalinas.</p>
+              <a href="pages/destinos.html" class="btn btn-primario">Saiba mais</a>
             </div>
-            <div class="caixa-imagem">
-                <img src="images/paris.jpg" alt="Destino TripWay">
+          </div>
+
+          <div class="card">
+            <img
+              src="https://images.pexels.com/photos/2901209/pexels-photo-2901209.jpeg"
+              alt="Vista das montanhas dos Alpes suíços"
+            >
+            <div class="card-body">
+              <h3>Alpes Suíços</h3>
+              <p>Aventure-se pelas montanhas nevadas da Suíça com trilhas e paisagens de tirar o fôlego.</p>
+              <a href="pages/destinos.html" class="btn btn-primario">Saiba mais</a>
             </div>
-        </section>
+          </div>
 
-        <section class="sobre">
-            <h2>Sobre a TripWay</h2>
-            <p>Oferecemos experiências incríveis através das nossas viagens. Somos o guia perfeito para qualquer tipo de aventura!</p>
-        </section>
+          <div class="card">
+            <img
+              src="https://images.pexels.com/photos/2506923/pexels-photo-2506923.jpeg"
+              alt="Vista da cidade de Tóquio ao entardecer"
+            >
+            <div class="card-body">
+              <h3>Tóquio</h3>
+              <p>Explore a vibrante capital japonesa, entre tecnologia de ponta, tradição milenar e gastronomia única.</p>
+              <a href="pages/destinos.html" class="btn btn-primario">Saiba mais</a>
+            </div>
+          </div>
 
-    </main>
+        </div>
+      </div>
+    </section>
 
-    <footer>
-        <p>&copy; 2026 TripWay</p>
-    </footer>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2026 TripWay — Todos os direitos reservados</p>
+  </footer>
 
 </body>
 </html>
