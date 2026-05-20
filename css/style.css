@@ -1,159 +1,559 @@
-:root {
-    --cor-principal: #1a73e8;
-    --cor-escura: #1557b0;
-    --cor-texto: #333333;
-    --cor-fundo: #f8f9fa;
-    --cor-branco: #ffffff;
-    --cor-cinza: #636e72;
-}
-
+/* ===========================
+   RESET BÁSICO
+   =========================== */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+/* ===========================
+   VARIÁVEIS CSS
+   =========================== */
+:root {
+  --cor-primaria: #0a3d62;
+  --cor-secundaria: #1e6fa5;
+  --cor-acento: #f0a500;
+  --cor-acento-hover: #c98a00;
+  --cor-fundo: #f4f7fb;
+  --cor-fundo-escuro: #0a1e2e;
+  --cor-texto: #1a2b3c;
+  --cor-texto-suave: #4a6080;
+  --cor-branco: #ffffff;
+  --cor-borda: #c9d8e8;
+  --sombra-leve: 0 2px 12px rgba(10, 61, 98, 0.10);
+  --sombra-media: 0 6px 28px rgba(10, 61, 98, 0.18);
+  --raio: 12px;
+  --raio-pequeno: 6px;
+  --transicao: all 0.3s ease;
+  --max-largura: 1200px;
+}
+
+/* ===========================
+   BODY
+   =========================== */
 body {
-    font-family: Arial, sans-serif;
-    background-color: var(--cor-fundo);
-    color: var(--cor-texto);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  line-height: 1.7;
+  font-size: 1rem;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ===========================
+   HEADER
+   =========================== */
 header {
-    background-color: var(--cor-branco);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(135deg, var(--cor-fundo-escuro) 0%, var(--cor-primaria) 100%);
+  padding: 0 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: var(--sombra-media);
 }
 
-nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 80%;
-    margin: 0 auto;
-    height: 70px;
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: var(--max-largura);
+  margin: 0 auto;
+  height: 4.5rem;
 }
 
 .logo {
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: var(--cor-principal);
-    text-decoration: none;
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--cor-branco);
+  text-decoration: none;
+  letter-spacing: 1px;
 }
 
+.logo span {
+  color: var(--cor-acento);
+}
+
+/* ===========================
+   NAVEGAÇÃO
+   =========================== */
 nav ul {
-    display: flex;
-    list-style: none;
-    gap: 2rem;
+  list-style: none;
+  display: flex;
+  gap: 2rem;
 }
 
 nav ul li a {
-    text-decoration: none;
-    color: var(--cor-texto);
-    font-weight: 500;
+  color: var(--cor-branco);
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  padding: 0.4rem 0;
+  border-bottom: 2px solid transparent;
+  transition: var(--transicao);
 }
 
 nav ul li a:hover {
-    color: var(--cor-principal);
+  color: var(--cor-acento);
+  border-bottom: 2px solid var(--cor-acento);
 }
 
-nav ul li a.active {
-    color: var(--cor-principal);
-    border-bottom: 3px solid var(--cor-principal);
-    padding-bottom: 4px;
+/* ===========================
+   HERO / BANNER
+   =========================== */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  min-height: 500px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
-.caixa-principal {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 2rem;
-    width: 80%;
-    margin: 40px auto;
+.hero img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 0;
 }
 
-.caixa-texto h1 {
-    font-size: 2.5rem;
-    color: #2d3436;
-    margin-bottom: 16px;
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(10,30,46,0.55) 0%, rgba(10,61,98,0.70) 100%);
+  z-index: 1;
 }
 
-.caixa-texto h1 span {
-    color: var(--cor-principal);
+.hero-content {
+  position: relative;
+  z-index: 2;
+  color: var(--cor-branco);
+  padding: 2rem;
+  max-width: 750px;
 }
 
-.caixa-texto p {
-    font-size: 1rem;
-    color: var(--cor-cinza);
-    margin-bottom: 24px;
+.hero-content h2 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 800;
+  color: var(--cor-branco);
+  margin-bottom: 1rem;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.4);
 }
 
-.caixa-imagem img {
-    width: 500px;
-    border-radius: 12px;
+.hero-content p {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  margin-bottom: 2rem;
+  opacity: 0.92;
 }
 
-.botao {
-    display: inline-block;
-    padding: 12px 24px;
-    background-color: var(--cor-principal);
-    color: white;
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: 600;
+/* ===========================
+   BOTÕES
+   =========================== */
+.btn {
+  display: inline-block;
+  padding: 0.85rem 2rem;
+  border-radius: var(--raio-pequeno);
+  font-size: 1rem;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  transition: var(--transicao);
 }
 
-.botao:hover {
-    background-color: var(--cor-escura);
+.btn-primario {
+  background-color: var(--cor-acento);
+  color: var(--cor-fundo-escuro);
 }
 
-.sobre {
-    background-color: var(--cor-branco);
-    padding: 60px 10%;
-    text-align: center;
+.btn-primario:hover {
+  background-color: var(--cor-acento-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--sombra-media);
 }
 
-.sobre h2 {
-    font-size: 2rem;
-    color: #2d3436;
-    margin-bottom: 16px;
+.btn-secundario {
+  background-color: transparent;
+  color: var(--cor-branco);
+  border: 2px solid var(--cor-branco);
 }
 
-.sobre p {
-    color: var(--cor-cinza);
-    max-width: 600px;
-    margin: 0 auto;
+.btn-secundario:hover {
+  background-color: var(--cor-branco);
+  color: var(--cor-primaria);
+  transform: translateY(-2px);
 }
 
+/* ===========================
+   SEÇÕES GERAIS
+   =========================== */
+section {
+  padding: 5rem 2rem;
+}
+
+.container {
+  max-width: var(--max-largura);
+  margin: 0 auto;
+}
+
+.titulo-secao {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.titulo-secao h2 {
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  color: var(--cor-primaria);
+  margin-bottom: 0.75rem;
+}
+
+.titulo-secao p {
+  color: var(--cor-texto-suave);
+  font-size: 1.05rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* ===========================
+   SEÇÃO SOBRE
+   =========================== */
+#sobre {
+  background-color: var(--cor-branco);
+}
+
+.sobre-grid {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  max-width: var(--max-largura);
+  margin: 0 auto;
+}
+
+.sobre-texto h2 {
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  color: var(--cor-primaria);
+  margin-bottom: 1rem;
+}
+
+.sobre-texto p {
+  color: var(--cor-texto-suave);
+  margin-bottom: 1.5rem;
+  font-size: 1.05rem;
+}
+
+.sobre-img {
+  flex: 1;
+  min-width: 280px;
+}
+
+.sobre-img img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: var(--raio);
+  box-shadow: var(--sombra-media);
+}
+
+.sobre-texto {
+  flex: 1;
+}
+
+/* ===========================
+   CARDS (compartilhado com destinos e pacotes)
+   =========================== */
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  max-width: var(--max-largura);
+  margin: 0 auto;
+}
+
+.card {
+  background-color: var(--cor-branco);
+  border-radius: var(--raio);
+  box-shadow: var(--sombra-leve);
+  overflow: hidden;
+  flex: 1 1 280px;
+  max-width: 360px;
+  transition: var(--transicao);
+  border: 1px solid var(--cor-borda);
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--sombra-media);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 1.25rem 1.5rem 1.5rem;
+}
+
+.card-body h3 {
+  font-size: 1.2rem;
+  color: var(--cor-primaria);
+  margin-bottom: 0.5rem;
+}
+
+.card-body p {
+  font-size: 0.95rem;
+  color: var(--cor-texto-suave);
+  margin-bottom: 1rem;
+}
+
+/* ===========================
+   FORMULÁRIO (página contato)
+   =========================== */
+.form-container {
+  max-width: 700px;
+  margin: 0 auto;
+  background: var(--cor-branco);
+  padding: 2.5rem;
+  border-radius: var(--raio);
+  box-shadow: var(--sombra-media);
+}
+
+.form-grupo {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.25rem;
+}
+
+.form-grupo label {
+  font-weight: 600;
+  color: var(--cor-primaria);
+  margin-bottom: 0.4rem;
+  font-size: 0.95rem;
+}
+
+.form-grupo input,
+.form-grupo select,
+.form-grupo textarea {
+  padding: 0.75rem 1rem;
+  border: 1.5px solid var(--cor-borda);
+  border-radius: var(--raio-pequeno);
+  font-family: inherit;
+  font-size: 1rem;
+  color: var(--cor-texto);
+  background-color: var(--cor-fundo);
+  transition: var(--transicao);
+  outline: none;
+}
+
+.form-grupo input:focus,
+.form-grupo select:focus,
+.form-grupo textarea:focus {
+  border-color: var(--cor-secundaria);
+  background-color: var(--cor-branco);
+  box-shadow: 0 0 0 3px rgba(30, 111, 165, 0.12);
+}
+
+.form-grupo textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.form-linha {
+  display: flex;
+  gap: 1rem;
+}
+
+.form-linha .form-grupo {
+  flex: 1;
+}
+
+/* ===========================
+   FOOTER
+   =========================== */
 footer {
-    text-align: center;
-    padding: 24px;
-    background-color: #2d3436;
-    color: white;
-    margin-top: 60px;
+  background: var(--cor-fundo-escuro);
+  color: var(--cor-branco);
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.95rem;
+  opacity: 0.9;
 }
 
+footer a {
+  color: var(--cor-acento);
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* ===========================
+   LINKS
+   =========================== */
+a {
+  color: var(--cor-secundaria);
+  transition: var(--transicao);
+}
+
+a:hover {
+  color: var(--cor-primaria);
+}
+
+/* ===========================
+   RESPONSIVIDADE
+   =========================== */
+
+/* Tablet */
+@media (max-width: 900px) {
+  .sobre-grid {
+    flex-direction: column;
+  }
+
+  .sobre-img img {
+    height: 260px;
+  }
+
+  .cards-container {
+    gap: 1.25rem;
+  }
+
+  .card {
+    flex: 1 1 calc(50% - 1.25rem);
+    max-width: 100%;
+  }
+
+  .form-linha {
+    flex-direction: column;
+    gap: 0;
+  }
+}
+
+/* Celular */
 @media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-        height: auto;
-        padding: 16px 0;
-        gap: 12px;
-    }
+  nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem 0;
+  }
 
-    nav ul {
-        gap: 1rem;
-    }
+  .header-inner {
+    flex-direction: column;
+    height: auto;
+    padding: 1rem 0;
+    gap: 0.5rem;
+  }
 
-    .caixa-principal {
-        flex-direction: column;
-        text-align: center;
-    }
+  .hero {
+    height: 70vh;
+  }
 
-    .caixa-texto h1 {
-        font-size: 1.8rem;
-    }
+  .cards-container {
+    flex-direction: column;
+    align-items: center;
+  }
 
-    .caixa-imagem img {
-        width: 100%;
-    }
+  .card {
+    flex: unset;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  section {
+    padding: 3rem 1.25rem;
+  }
+
+  .form-container {
+    padding: 1.5rem;
+  }
+
+  .form-linha {
+    flex-direction: column;
+    gap: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    font-size: 1.4rem;
+  }
+
+  .hero-content h2 {
+    font-size: 1.8rem;
+  }
+
+  .btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.95rem;
+  }
+}
+
+/* ===========================
+   BANNER INTERNO DAS PÁGINAS
+   =========================== */
+.pagina-banner {
+  background: linear-gradient(135deg, var(--cor-fundo-escuro) 0%, var(--cor-primaria) 100%);
+  color: var(--cor-branco);
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.pagina-banner h1 {
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  color: var(--cor-branco);
+  margin-bottom: 0.75rem;
+}
+
+.pagina-banner p {
+  font-size: 1.1rem;
+  opacity: 0.85;
+}
+
+/* ===========================
+   TAG DOS CARDS
+   =========================== */
+.card-tag {
+  display: inline-block;
+  background-color: var(--cor-acento);
+  color: var(--cor-fundo-escuro);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.2rem 0.7rem;
+  border-radius: 20px;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ===========================
+   LISTA DE INFOS DO CARD (pacotes)
+   =========================== */
+.card-info {
+  list-style: none;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  color: var(--cor-texto-suave);
+}
+
+.card-info li {
+  padding: 0.2rem 0;
+  border-bottom: 1px solid var(--cor-borda);
+}
+
+.card-info li:last-child {
+  border-bottom: none;
 }
